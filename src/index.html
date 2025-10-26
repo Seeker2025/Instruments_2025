@@ -4,20 +4,48 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Instruments</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <header>
+      <p>Index</p>
+      <h1>Instruments</h1>
+      <ul>
+        <li><a href="#">Home</a></li>  
+        <li><a href="./favorite.html">Favorite</a></li>  
+        <li><a href="./checkout.html">Checkout</a></li>  
+      </ul>
+      
+
+    <input type="text" class="js-search">
+    </header>
+
+    <!-- <li data-id=${id} class="js-card">
+          <img src="./img/in01.jpg" alt="inst" width="300">
+            <h2>${name}</h2>
+                <p><a href="#" class="js-info">More Information</a></p>
+            <div>
+                <button>Add to favorite</button>
+                <button>Add to basket</button>
+            </div>
+        </li>` -->
+   
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <div class="container">
+                                      <ul class="js-list">
+                                        
+                                      </ul>
+
+
+      </div>
+                   
+      
     </main>
 
-    <load src="./partials/footer.html" />
+   
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
