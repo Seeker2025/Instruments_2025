@@ -1,0 +1,26 @@
+ul.js-list{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+
+    background-color: rgb(66, 66, 139);
+    padding: 15px;
+}
+
+li.js-card{
+   
+    padding: 18px;
+    margin: 12px;
+    border-radius: 8px;
+    background-color: rgb(188, 188, 188);
+    
+}
+button{
+    padding: 10px 13px;
+    background-color: rgb(0, 99, 248);
+    color: #fff;
+    font-size: 0.8em;
+    border: 0px;
+    border-radius: 4px;
+}
