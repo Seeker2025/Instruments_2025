@@ -1,34 +1,27 @@
-import * as basicLightbox from 'basiclightbox'
-import "basiclightbox/dist/basicLightbox.min.css";
 
 import { instruments } from './instruments';
-console.log(instruments);
+import { common } from './common';
+
+const{ KEY_FAVORITE, KEY_BASKET }=common;
+import { createMarkup } from './helpers/createMarkup';
+import { createModal } from './helpers/createModal';
+// console.log(instruments);
 
 const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 
-const KEY_FAVORITE = 'favorite';
-const KEY_BASKET = 'basket';
+
 
 const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+console.log( favoriteArr);
 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
+console.log( basketArr);
 
 
 
 console.log(search);
 
-function createMarkup(arr){
-    const markup = arr.map(({id, img, name})=>`<li data-id=${id} class="js-card">
-          <img src="${img}" alt="${name}" width="300">
-            <h2>${name}</h2>
-                <p><a href="#" class="js-info">More Information</a></p>
-            <div>
-                <button class="js-favorite">Add to favorite</button>
-                <button class="js-basket">Add to basket</button>
-            </div>
-        </li>`).join('');
-        list.innerHTML = markup;
-};
+
 
 
 list.addEventListener('click', onClick);
@@ -40,36 +33,40 @@ function onClick(evt){
         const product = findProduct(evt.target);
         console.log(product);
         const{img, name, price, description}=product
-        const instance = basicLightbox.create(`
-	    <div class="modal">
-            <img src="${img}" alt="${name}" width="300">
-            <h2>${name}</h2>
-            <h3>${price}point</h3>
-            <p>${description}</p>
-              <div>
-                  <button>Add to favorite</button>
-                  <button>Add to basket</button>
-              </div>
-        </div>
-`);
-instance.show();
-    }
-    if(evt.target.classList.contains('js-basket')){
-        const product = findProduct(evt.target);
-        console.log(product);
-        basketArr.push(product);
-        localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
+       createModal({img, name, price, description})
+       
     }
     if(evt.target.classList.contains('js-favorite')){
+        console.log(evt.target);
         const product = findProduct(evt.target);
+        const inStorage = favoriteArr.some(({ id })=> id === product.id)
+        if(inStorage){
+            return
+        }
         console.log(product);
+        console.log(favoriteArr);
         favoriteArr.push(product);
+        console.log(favoriteArr);
         localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
     }
 
+
+    if(evt.target.classList.contains('js-basket')){
+        const product = findProduct(evt.target);
+        const inStorage = basketArr.some(({ id })=> id === product.id)
+        if(inStorage){
+            return
+        }
+        console.log(product);
+        basketArr.push(product);
+        console.log(basketArr);
+        localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
+    }
+    
+
 }
 
-createMarkup(instruments);
+createMarkup(instruments, list);
 
 function findProduct(elem){
     const productId = Number(elem.closest('.js-card').dataset.id)
