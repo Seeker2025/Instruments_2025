@@ -1,16 +1,27 @@
 export { instruments };
 
+import  in01  from './img/in01.jpg';
+import  in02  from './img/in02.jpg';
+import  in03  from './img/in03.jpg';
+import  in04  from './img/in04.jpg';
+import  in05  from './img/in05.jpg';
+import  in06  from './img/in06.jpg';
+import  in07  from './img/in07.jpg';
+import  in08  from './img/in08.jpg';
+import  in09  from './img/in09.jpg';
+import  in10  from './img/in10.jpg';
+
 const instruments = [
      {
   id: 1,
-  img: "./img/in01.jpg",
+  img: in01,
   name: "Шуруповерт",
   price: 1500,
   description: "Мережевий дриль-шуруповерт ТD-30-Надійний помічник для робіт по дому"
      },
      {
   id: 2,
-  img: "./img/in02.jpg",
+  img: in02,
   name: "Перфоратор",
   price: 3948,
   description: "Перфоратор бочковий Dnipro-M BH-20 Використовується для сверління"
@@ -18,21 +29,21 @@ const instruments = [
 
       {
  id: 3,
- img: "./img/in03.jpg",
+ img: in03,
  name: "Шліфмашина",
  price: 1299,
  description: "Кутова шліфмашина Dnipro-M GS-98 - модель яка поєднує в собі"
    },
     {
  id: 4,
- img: "./img/in04.jpg",
+ img: in04,
  name: "Пила",
  price: 11049,
  description: "Мобільна акумуляторна ланцюгова пила DCS-200BC DUAL"
    }, 
    {
  id: 5,
- img: "./img/in05.jpg",
+ img: in05,
  name: "Рівень",
  price: 897,
  description: "Рівень серії ProVision виробництва DNIPRO-M"
@@ -40,7 +51,7 @@ const instruments = [
   
     {
  id: 6,
- img: "./img/in06.jpg",
+ img: in06,
  name: "Тример",
  price: 3699,
  description: "Тример електричний Dnipro-M 110 призначений для покосу трави"
@@ -48,7 +59,7 @@ const instruments = [
      
     {
  id: 7,
- img: "./img/in07.jpg",
+ img: in07,
  name: "Мотокоса",
  price: 11049,
  description: "Мотокоса Dnipro-M 43 призначений для покосу трави, чагарників, бур'янів"
@@ -56,7 +67,7 @@ const instruments = [
 
     {
         id: 8,
- img: "./img/in08.jpg",
+ img: in08,
  name: "Генератор",
  price: 10890,
  description: "Бензиновый генератор Dnipro-M GX-25 номінальною потужністю 2,5 кВт"
@@ -64,7 +75,7 @@ const instruments = [
 
     {
         id: 9,
- img: "./img/in09.jpg",
+ img: in09,
  name: "Культиватор",
  price: 10890,
  description: "Культиватор електричний Dnipro-M 40"
@@ -72,7 +83,7 @@ const instruments = [
 
     {
         id: 10,
- img: "./img/in10.jpg",
+ img: in10,
  name: "Лобзик електричний",
  price: 10890,
  description: "Лобзик електричний Dnipro-M JS-80LX + Набір пиляльних полотен 5 шт"
