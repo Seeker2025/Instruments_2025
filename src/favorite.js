@@ -10,7 +10,7 @@ console.log(list);
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 console.log(favorite);
 
-createMarkup(favorite,list);
+createMarkup(favorite, list);
 
 list.addEventListener('click', onClick);
 
