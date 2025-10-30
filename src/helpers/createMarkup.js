@@ -3,10 +3,10 @@ function createMarkup(arr, list){
     let markup;
     if(arr.length){
         markup =  arr.map(({id, img, name})=>`
-                    <li data-id=${id} class="js-card">
+                    <li data-id=${id} class="card js-card">
                     <img src="${img}" alt="${name}" width="300">
                     <h2>${name}</h2>
-                    <p><a href="#" class="js-info">More Information</a></p>
+                    <p><a href="#" class="info js-info">More Information</a></p>
                     <div>
                     <button class="js-favorite">Add to favorite</button>
                     <button class="js-basket">Add to basket</button>

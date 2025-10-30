@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: gray;
-  padding: 15px;
+  padding: 25px;
 }
 
 main {
@@ -31,4 +31,8 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+a{
+  cursor: pointer;
 }
