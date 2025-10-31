@@ -1,4 +1,4 @@
-ul.js-list{
+ul.list{
     display: flex;
     flex-direction: row;
     justify-items: flex-start;
@@ -8,10 +8,11 @@ ul.js-list{
     padding: 15px;
 }
 
-li.js-card{
+li.card{
    
     padding: 18px;
     margin: 12px;
+    width: 300px;
     border-radius: 8px;
     background-color: rgb(188, 188, 188);
     
