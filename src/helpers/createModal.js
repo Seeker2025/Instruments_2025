@@ -3,9 +3,14 @@ import "basiclightbox/dist/basicLightbox.min.css";
 
 import { closeMadal } from './closeModal';
 import closeIcon from '../img/close.png';
+// const list = document.querySelector('.js-list');
+import { 
+    toFavorite,
+    toBusket,
+                } from './favorite';
 
 
-function createModal({img, name, price, description}){
+function createModal({img, name, price, description, id}){
 //   const option = {
 //     handler: null,
 //     onShow(instance){
@@ -18,10 +23,11 @@ function createModal({img, name, price, description}){
 //   },
   
 // };
+console.log(id);
 
   
      const instance = basicLightbox.create(`
-	    <div class="modal">
+	    <div class="modal js-card" data-id=${id}>
             <div class="cross">
                  <img src=${closeIcon} alt="close">
             </div>
@@ -30,8 +36,8 @@ function createModal({img, name, price, description}){
             <h3>${price}point</h3>
             <p>${description}</p>
               <div>
-                  <button>Add to favorite</button>
-                  <button>Add to basket</button>
+                  <button class="js-favorite">Add to favorite</button>
+                  <button class="js-basket">Add to basket</button>
               </div>
         </div>
 `, {
@@ -70,6 +76,19 @@ instance.show();
     instance.close();
  }
 
+ const modal = document.querySelector('.modal');
+ console.log(modal);
+ modal.addEventListener('click', onClick);
+ function onClick(evt){
+ if(evt.target.classList.contains('js-favorite')){
+    console.log('Hi', evt.target);
+    toFavorite(evt.target);
+ }
+}
+ if(evt.target.classList.contains('js-basket')){
+        toBusket(evt.target);
+
+}
 }
 
 
