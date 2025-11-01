@@ -11,7 +11,7 @@
 
 
 /* Sections style */
-@import url('./header.css');
+
 @import url('./box.css');
 @import url('./modal.css');
 @import url('./checkout.css');

@@ -7,7 +7,7 @@ import closeIcon from '../img/close.png';
 import { 
     toFavorite,
     toBusket,
-                } from './favorite';
+                } from './favoriteFun';
 
 
 function createModal({img, name, price, description, id}){
@@ -36,8 +36,8 @@ console.log(id);
             <h3>${price}point</h3>
             <p>${description}</p>
               <div>
-                  <button class="js-favorite">Add to favorite</button>
-                  <button class="js-basket">Add to basket</button>
+                  <button class="js-favorite" type="button">Add to favorite</button>
+                  <button class="js-basket" type="button">Add to basket</button>
               </div>
         </div>
 `, {
@@ -84,11 +84,13 @@ instance.show();
     console.log('Hi', evt.target);
     toFavorite(evt.target);
  }
-}
- if(evt.target.classList.contains('js-basket')){
+
+  if(evt.target.classList.contains('js-basket')){
         toBusket(evt.target);
 
 }
+}
+
 }
 
 
