@@ -1,4 +1,4 @@
-.checkout_list{
+ul.checkout_list{
     background-color: rgb(93, 111, 13);
 }
 ul.ul_list{
@@ -21,4 +21,7 @@ ul.ul_list li:first-child{
 .info{
     color: rgb(0, 0, 0);
     font-weight: bolder;
+}
+.red{
+    background-color: red;
 }

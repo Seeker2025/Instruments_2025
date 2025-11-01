@@ -7,9 +7,10 @@ import { createMarkup } from './helpers/createMarkup';
 import { createModal } from './helpers/createModal';
 import { 
     toFavorite,
-    toBusket,
-    findProduct
-                    } from './helpers/favorite';
+    toBusket
+   
+                    } from './helpers/favoriteFun';
+import { findProduct } from './helpers/findProduct';
 
 
 const search = document.querySelector('.js-search');
@@ -33,15 +34,17 @@ list.addEventListener('click', onClick);
 
 function onClick(evt){
     evt.preventDefault();
+    console.log(evt.target);
     if(evt.target.classList.contains('js-info')){
        
-        const product = findProduct(evt.target);
+        const product = findProduct(evt.target, instruments);
         console.log(product);
         const{img, name, price, description, id}=product
        createModal({img, name, price, description, id})
        
     }
     if(evt.target.classList.contains('js-favorite')){
+        console.log(evt.target);
         toFavorite(evt.target)
         // console.log(evt.target);
         // const product = findProduct(evt.target);
