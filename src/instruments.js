@@ -84,7 +84,7 @@ const instruments = [
     {
         id: 10,
  img: in10,
- name: "Лобзик електричний",
+ name: "Лобзик",
  price: 10890,
  description: "Лобзик електричний Dnipro-M JS-80LX + Набір пиляльних полотен 5 шт"
     },  

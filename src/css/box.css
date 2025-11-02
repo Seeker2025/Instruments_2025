@@ -60,3 +60,8 @@ ul.ul_list li:first-child{
     color: rgb(0, 0, 0);
     font-weight: bolder;
 }
+
+.red{
+    background-color: rgb(155, 155, 155);
+    color: rgb(207, 207, 207);
+}

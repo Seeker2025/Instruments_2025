@@ -19,3 +19,8 @@ div.modal{
     height: 25px;
 
 }
+div.modal p{
+    color: maroon;
+    line-height: 26px;
+    margin-bottom: 13px;
+}
