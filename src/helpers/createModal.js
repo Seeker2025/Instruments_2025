@@ -23,7 +23,7 @@ function createModal({img, name, price, description, id}){
 //   },
   
 // };
-console.log(id);
+// console.log(id);
 
   
      const instance = basicLightbox.create(`

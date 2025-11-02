@@ -5,6 +5,7 @@ import { createMarkup } from './helpers/createMarkup';
 import { createModal } from './helpers/createModal';
 import { findProduct } from './helpers/findProduct';
 import { toBusket } from './helpers/favoriteFun';
+import {buttonDis} from './helpers/buttonDis'
 
 
 const list = document.querySelector('.js-list');
@@ -13,6 +14,10 @@ const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 console.log(favorite);
 
 createMarkup(favorite, list);
+
+
+ buttonDis('.js-favorite', list);
+
 
 list.addEventListener('click', onClick);
 
@@ -23,7 +28,10 @@ function onClick(evt){
         const product = findProduct(evt.target, favorite);
         console.log(product);
         const{img, name, price, description}=product
-       createModal({img, name, price, description})
+       createModal({img, name, price, description});
+       const modal = document.querySelector('.modal');
+       console.log(modal);
+       buttonDis('.js-favorite', modal);
        
     }
       if(evt.target.classList.contains('js-basket')){
