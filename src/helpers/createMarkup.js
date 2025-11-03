@@ -1,3 +1,5 @@
+import noImg from '../img/no_img.png';
+
 function createMarkup(arr, list){
     // console.log(arr.length);
     let markup;
@@ -16,7 +18,7 @@ function createMarkup(arr, list){
                 list.innerHTML = markup;
     }else{
         markup =   `<li class="js-card">
-                    <img src="img/no_img.png" alt="404" width="300">
+                    <img src=${noImg} alt="404" width="300">
                     </li>`
                 list.innerHTML = markup;
     }
