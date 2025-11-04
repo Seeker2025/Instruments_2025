@@ -7,7 +7,7 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(128, 127, 127, 0.87);
+  /* background-color: rgba(167, 49, 49, 0.87); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
-  background-color: gray;
+  background-color: rgb(100, 100, 100);
   padding: 25px;
 }
 
