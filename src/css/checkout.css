@@ -13,11 +13,11 @@ ul.ul_list li{
     padding-left: 15px;
     font-weight: bold;
 }
-ul.ul_list li:first-child{
+/* ul.ul_list li:first-child{
     padding-left: 0px;
     color: blue;
     
-}
+} */
 .info{
     color: rgb(0, 0, 0);
     font-weight: bolder;
