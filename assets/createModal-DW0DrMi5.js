@@ -25,4 +25,4 @@ import{b as h}from"./vendor-DaP2veRQ.js";(function(){const t=document.createElem
               </div>
         </div>
 `,{handler:null,onShow(c){console.log(this),this.handler=w.bind(c),document.addEventListener("keydown",this.handler)},onClose(){console.log(this),document.removeEventListener("keydown",this.handler),r.removeEventListener("click",l)}});s.show();const r=document.querySelector(".cross");console.log(r),r.addEventListener("click",l);function l(){console.log("whoa!"),s.close()}const g=document.querySelector(".modal");console.log(g),g.addEventListener("click",f);function f(c){c.target.classList.contains("js-favorite")&&(console.log("Hi",c.target),C(c.target)),c.target.classList.contains("js-basket")&&O(c.target)}}export{O as a,R as b,K as c,_ as d,m as f,p as i,C as t};
-//# sourceMappingURL=createModal-B6w-vm8p.js.map
+//# sourceMappingURL=createModal-DW0DrMi5.js.map
